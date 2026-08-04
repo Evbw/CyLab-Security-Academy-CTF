@@ -1,3 +1,40 @@
 Fortunately and unfortunately I finished these challenges fairly quickly. They were designed to illustrate principles, so at no point
 were they supposed to be a challenge to be overcome and indeed, even in the few instances where I did get stuck, the hints provided
 enough guidance for me to move on. I did realize how fun I find them, however!
+
+I should note that there was a run of 5 programs that involved trying to find a password, so I did find it useful to create a short
+python script in the CyLab Webshell. I no longer have access to that file, so I have recreated it with Claude Sonnet 5 below:
+
+#!/usr/bin/env python3
+"""Crack level5: MD5 dictionary-attack the password, then XOR-decrypt the flag.
+
+Expects dictionary.txt, level5.hash.bin, level5.flag.txt.enc in the same dir.
+"""
+import hashlib
+
+DICT_FILE = "dictionary.txt"
+HASH_FILE = "level5.hash.bin"
+FLAG_FILE = "level5.flag.txt.enc"
+
+
+def xor_decrypt(data: bytes, key: str) -> bytes:
+    key_bytes = key.encode()
+    return bytes(b ^ key_bytes[i % len(key_bytes)] for i, b in enumerate(data))
+
+
+def main():
+    target_hash = open(HASH_FILE, "rb").read()
+    flag_enc = open(FLAG_FILE, "rb").read()
+
+    with open(DICT_FILE) as f:
+        for line in f:
+            pw = line.strip()
+            if hashlib.md5(pw.encode()).digest() == target_hash:
+                print(f"password: {pw}")
+                print(f"flag: {xor_decrypt(flag_enc, pw).decode()}")
+                return
+    print("no match found in dictionary")
+
+
+if __name__ == "__main__":
+    main()
