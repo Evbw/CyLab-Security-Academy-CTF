@@ -1,0 +1,6 @@
+I had a little more difficulty in this section, specifically with the image exercise Glory of the Garden. For Glory of the Garden,
+I ran the command xxd garden.jpg > output.txt and visually inspected the file, due to a lack of consistent strings to find the
+flag. After I found it, I realized I was somewhat limited in my searches, as I could have tried grep "CTF" in the output file.
+For Enhance!, strings returned data on an SVG file that contained a flag.
+
+Later, in the sleuthkit exercises, Disk, disk, sleuth! gave me pause, but ultimately the "strings" command came through again.
