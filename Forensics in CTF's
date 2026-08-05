@@ -4,3 +4,9 @@ flag. After I found it, I realized I was somewhat limited in my searches, as I c
 For Enhance!, strings returned data on an SVG file that contained a flag.
 
 Later, in the sleuthkit exercises, Disk, disk, sleuth! gave me pause, but ultimately the "strings" command came through again.
+
+For the extensions exercise, I opened the flag.txt file in several editors, and there was a clue when it came through so cleanly
+in a hex editor. exiftool revealed it was actually a PNG, so converting the file type revealed the flag in plain text in the image.
+
+The St3g0 exercise took me a minute until I found out about zsteg. After using zsteg -help, I saw that zsteg -a would try all known
+steganography methods. The same process worked for the next exercise as well.
