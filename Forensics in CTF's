@@ -10,3 +10,7 @@ in a hex editor. exiftool revealed it was actually a PNG, so converting the file
 
 The St3g0 exercise took me a minute until I found out about zsteg. After using zsteg -help, I saw that zsteg -a would try all known
 steganography methods. The same process worked for the next exercise as well.
+
+The wireshark exercises were sometimes easy; The Packet primer exercise had the flag visible in a TCP port. The last exercise was
+interesting, and combined all of the previous exercises into quite the puzzle! After finally finding the image file, I needed to
+install steghide and restart my machine before I could run the command. Oh, the sacrifices we make...
