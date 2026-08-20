@@ -1,0 +1,12 @@
+Much of the learning path is unremarkable as it is an intro, but I genuinely stumbled at the Interlude, which involved exploiting
+weaknesses in a python program. I not feel I am giving anything away, since the solutions are made available as part of the readings,
+but I never would have thought to enter part of a function as part of an exploit. "we can still do the things that the win function
+does, as long as the substring win is not present in those things." Unfortunately, I'm not sure how well that lesson will stick,
+given that it won't be a regularly practiced drill!
+
+The very next challenge threw me even worse, giving us many fewer entries. I knew that the vulnerability lied in the "write_variable"
+function we were given access to, but even after reading the solution I didn't fully understand, so I had to look it up. I kept
+trying to find ways to write the win() function directly instead of exploiting the table to call the function. I don't feel great
+about the result, but I struggled with it for a very long time with only a recognitiion of the crack to show for it. All in all,
+those lessons weren't about coming up with a solution by themselves, they were meant to illustrate a point, and I feel like my
+vocabulary of possibilities is a little larger now.
