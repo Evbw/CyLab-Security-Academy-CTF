@@ -5,8 +5,18 @@ does, as long as the substring win is not present in those things." Unfortunatel
 given that it won't be a regularly practiced drill!
 
 The very next challenge threw me even worse, giving us many fewer entries. I knew that the vulnerability lied in the "write_variable"
-function we were given access to, but even after reading the solution I didn't fully understand, so I had to look it up. I kept
-trying to find ways to write the win() function directly instead of exploiting the table to call the function. I don't feel great
-about the result, but I struggled with it for a very long time with only a recognitiion of the crack to show for it. All in all,
-those lessons weren't about coming up with a solution by themselves, they were meant to illustrate a point, and I feel like my
+function we were given access to, but even after reading the solution I didn't fully understand. I kept trying to find ways to write
+the win() function directly instead of exploiting the table to call the function, which I found when searching after the fact. I don't
+feel great about the result, but I struggled with it for a very long time with only a recognitiion of the crack to show for it. All in 
+all, those lessons weren't about coming up with a solution by themselves, they were meant to illustrate a point, and I feel like my
 vocabulary of possibilities is a little larger now.
+
+The last segment about buffer overflows came naturally. I brute-forced the first couple of challenges, winnowing down possibilities
+until I recognized the ASCII and input the correct character. The solution on the next page recommended the alphabet method.
+
+The final challenge stumped me, even after I found the correct address of the win() function using gdb. I kept attempting various methods
+of inputting the target address directly into the connection; specific characters (until I realized none exist), escape characters
+for the ASCII values (which were read as string literals), inputting escape \" to try to trip up the read method, and so on until the
+instance collapsed. Once it did so, I looked at the solution on the next page and found the answer. I was close, but I don't think I
+am, as of yet, fully aware of the possible ways to run exploits on files. I may opt to do these challenges again until I can detect
+the type of problem it is.
