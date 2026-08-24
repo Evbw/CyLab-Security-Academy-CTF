@@ -18,3 +18,6 @@ script to XOR every character to get the flag.
 
 Challenge 7 required several steps; Converting a decimal value to binary, converting that binary value to hex, and then converting that hex value to
 ASCII. I was momentarily tripped up by the fact that the leading 0s were stripped from the online converter I used, but no problem.
+
+The final challenge of this group had a hardcoded method of flipping some bits. The reverse order of bit flipping on each character in sequence
+revealed the password.
