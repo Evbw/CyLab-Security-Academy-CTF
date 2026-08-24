@@ -7,3 +7,6 @@ I extracted the code with the characters in a separate file and then ran 4 comma
 3. sort -n -k1 to sort by the order index and guarantee it using numeric sort, instead of spaces.
 4. awk '{printf "%s", $2} END{print ""}' to print all of the characters in the second column (the actual password characters) with no spaces.
 
+The next challenge has the password visible as an anagram. The source code showed how the characters of a correct password were to be manipulated.
+It was simple enough to solve by hand, although a script could do the same. Challenge 4 similarly had ASCII characters plainly visible, so I used
+an online ASCII converter to get the decimal, hex, and octal values converted.
