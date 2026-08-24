@@ -10,3 +10,8 @@ I extracted the code with the characters in a separate file and then ran 4 comma
 The next challenge has the password visible as an anagram. The source code showed how the characters of a correct password were to be manipulated.
 It was simple enough to solve by hand, although a script could do the same. Challenge 4 similarly had ASCII characters plainly visible, so I used
 an online ASCII converter to get the decimal, hex, and octal values converted.
+
+Challenge 5 has ASCII characters represented in hex and converted into base64. I reconverted and then got the plaintext from the hexcodes.
+
+For challenge 6, I originally converted to ASCII first, but later noticed that the character was being XORed by a constant, so I built a short
+script to XOR every character to get the flag.
