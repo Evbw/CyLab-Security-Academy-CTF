@@ -1,0 +1,9 @@
+These challenges focus on reverse engineering Java code! The first challenge was introductory and only required copy/pasting from the file.
+The second challenge still had the literal characters still visible, so it was still trivial, if a little bothersome to extract the characters.
+I extracted the code with the characters in a separate file and then ran 4 commands to make it somewhat easier on myself:
+
+1. grep -oP "the code with escape characters to account for parentheticals and whitespace" to isolate the characters.
+2. sed -E "the output from the previous command" to strip out everything but the order index and the character.
+3. sort -n -k1 to sort by the order index and guarantee it using numeric sort, instead of spaces.
+4. awk '{printf "%s", $2} END{print ""}' to print all of the characters in the second column (the actual password characters) with no spaces.
+
