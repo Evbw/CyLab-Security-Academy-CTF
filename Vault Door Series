@@ -15,3 +15,6 @@ Challenge 5 has ASCII characters represented in hex and converted into base64. I
 
 For challenge 6, I originally converted to ASCII first, but later noticed that the character was being XORed by a constant, so I built a short
 script to XOR every character to get the flag.
+
+Challenge 7 required several steps; Converting a decimal value to binary, converting that binary value to hex, and then converting that hex value to
+ASCII. I was momentarily tripped up by the fact that the leading 0s were stripped from the online converter I used, but no problem.
